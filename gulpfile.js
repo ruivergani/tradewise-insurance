@@ -44,7 +44,7 @@ gulp.task('allJS', gulpJS);
 // Concat all plugins JS
 function pluginsJS(){
     return gulp
-    .src(['']) 
+    .src(['./js/lib/swiper.min.js']) 
     .pipe(concat('plugins.js')) 
     .pipe(gulp.dest('js/'))
     .pipe(browserSync.stream())
