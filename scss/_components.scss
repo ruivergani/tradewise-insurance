@@ -1,0 +1,102 @@
+// Cards
+.card__hero__insurance{
+  @include flex(row, center, center);
+  gap: 15px;
+  width:100%;
+  max-width: 240px;
+  padding: 17px;
+  border-radius: 6px;
+  background: var(--white);
+  box-shadow: 0px 10px 10px 0px rgba(204, 209, 255, 0.20);
+  .card__hero__insurance__title{
+    p{
+      color: var(--gray-900);
+      font-family: 'Roboto Flex', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 14px; 
+    }
+    div{
+      margin-top: 10px;
+      border-radius: 9.955px;
+      background: #EDF0F7;
+      display: flex;
+      align-items: center;
+      padding: 5px 15px;
+      span{
+        color: #1D2A80;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 10px;
+      }
+    }
+  }
+}
+.card__insurance{
+  @include flex(column, center, center);
+  width: 100%;
+  max-width: 280px;
+  &:hover{
+    .card__insurance__image{
+      img{
+        transform: scale(1.1);
+      }
+    }
+  }
+  .card__insurance__image{
+    overflow: hidden;
+    max-height: 230px;
+    max-width: 280px;
+    img{
+      width: 100%;
+      height: 100%;
+      max-height: 230px;
+      max-width: 280px;
+      object-fit: cover;
+      transition: all .2s ease-in-out;
+    }
+  }
+  .card__insurance__content{
+    box-shadow: 0px 45.64px 60.91px -8.48497px rgba(159, 159, 159, 0.10);
+    padding: 30px;
+    h4, p{
+      font-family: 'Roboto', sans-serif;
+      color: #495057;
+      font-size: 18px;
+    }
+    h4{
+      font-weight: 500;
+      line-height: 150%;
+      margin-bottom: 10px;
+    }
+    p{
+      font-weight: 400;
+      line-height: 150%; /* 27px */
+    }
+    .btn-card-insurance{
+      margin-top: 30px;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center; 
+      transition: all .2s ease-in-out;
+      padding: 15px 47px;
+      border: 1px solid var(--primary-blue);
+      p{
+        transition: all .2s ease-in-out;
+        color: var(--primary-blue);
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.18px;
+      }
+      &:hover{
+        background-color: var(--primary-blue);
+        p{
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

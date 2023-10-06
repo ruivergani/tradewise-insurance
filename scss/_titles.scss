@@ -1,22 +1,35 @@
 // Typography
-h1,h2,h3,h4,h5,h6{
-    
+h2,h3,h4,h5,h6{
+    color: var(--gray-900);
+    font-family: 'Roboto Flex', sans-serif;
 }
 h1{
-    font-size: 64px;
+    color: var(--gray-900);
+    font-family: 'Roboto', sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 110%;
 }
 h2{
-    font-size: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 h3{
-    font-size: 40px;
-}
-h4{
     font-size: 32px;
 }
+h4{
+    font-size: 24px;
+}
 h5{
-    font-size: 24px; 
+    font-size: 22px; 
 }
 h6{
     font-size: 20px;
+}
+.subtitle-span{
+    color: var(--gray-600);
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
 }
