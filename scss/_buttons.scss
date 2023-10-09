@@ -38,3 +38,30 @@
     }
   }
 }
+.btn-page{
+  cursor: pointer;
+  display: inline-block;
+  text-align: center; 
+  transition: all .2s ease-in-out;
+  padding: 17px 27px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  p{
+    transition: all .2s ease-in-out;
+    color: var(--white);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &-primary{
+    background-color: var(--primary-blue);
+    &:hover{
+      border: 1px solid var(--primary-blue);
+      background-color: var(--white);
+      p{
+        color: var(--primary-blue);
+      }
+    }
+  }
+}
