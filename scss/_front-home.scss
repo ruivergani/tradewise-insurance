@@ -447,6 +447,11 @@
           font-weight: 700;
           line-height: 28px;
         }
+        &:hover{
+          p{
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
@@ -459,6 +464,7 @@
     }
   }
   @media (max-width: 768px){
+    margin-bottom: 60px;
     .container{
       padding: 60px;
       max-width: 100%;
@@ -471,6 +477,7 @@
     }
   }
   @media (max-width: 480px){
+    margin-bottom: 30px;
     .container{
       padding: 30px;
       gap: 30px;
@@ -484,6 +491,81 @@
         img{
           max-width: 250px;
         }
+      }
+    }
+  }
+}
+.s__news__home{
+  padding-bottom: 100px;
+  .container{
+    @include flex(row, flex-end, space-between);
+    .s__news__home__title{
+      width: 100%;
+      max-width: 466px;
+      h2{
+        margin-top: 20px;
+        margin-bottom: 32px;
+      }
+      p{
+        color: var(--gray-700);
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+      }
+      .s__news__home__title__link{
+        @include flex(row, flex-start, flex-start);
+        gap: 15px;
+        margin-top: 40px;
+        p,i{
+          color: var(--primary-blue);
+          font-family: 'Roboto', sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 26px;
+        }
+        &:hover{
+          p{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .s__news__home__posts{
+      @include flex(row, flex-start, flex-start);
+      gap: 32px;
+    }
+  }
+  // Responsive
+  @media (max-width:1170px){
+    .container{
+      @include flex(column, center, center);
+      gap: 40px;
+      .s__news__home__title{
+        max-width: 700px;
+      }
+      .s__news__home__posts{
+        max-width: 700px;
+        @include flex(row, flex-start, space-between);
+        gap: 65px;
+      }
+    }
+  }
+  @media (max-width: 768px){
+    padding-bottom: 60px;
+    .container{
+      gap: 30px;
+      .s__news__home__title{
+        h2{
+          margin-bottom: 20px;
+        }
+        .s__news__home__title__link{
+          margin-top: 20px;
+        }
+      }
+      .s__news__home__posts{
+        @include flex(column, center, center);
+        gap: 30px;
       }
     }
   }
