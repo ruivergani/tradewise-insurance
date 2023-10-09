@@ -1,4 +1,97 @@
 // Sections
+.s__get__insured{
+  padding: 100px 0px;
+  .container{
+    @include flex(row, flex-start, space-between);
+    .s__get__insured__title{
+      @include flex(column, flex-start, space-between);
+      width: 100%;
+      max-width: 220px;
+      h3{
+        color: var(--gray-900);
+        font-family: 'Roboto', sans-serif;
+        font-size: 26px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        line-height: 28px; /* 107.692% */
+      }
+      a{
+        margin-top: 26px;
+      }
+    }
+    .s__get__insured__list{
+      width: 100%;
+      max-width: 790px;
+      gap: 53px;
+      @include flex(row, flex-start, flex-start);
+      li{
+        width: 100%;
+        max-width: 227px;
+        span, h5, p{
+          font-family: 'Roboto', sans-serif;
+        }
+        span{
+          display: inline-block;
+          color: var(--gray-200);
+          font-size: 50px;
+          font-weight: 800;
+          line-height: 50px;
+          margin-bottom: 30px;
+        }
+        h5{
+          color: var(--gray-900);
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 28px;
+          margin-bottom: 15px;
+        }
+        p{
+          color: var(--gray-900);
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  // Responsive
+  @media (max-width: 1170px) {
+    .container{
+      @include flex(column, center, space-between);
+      gap: 40px;
+      .s__get__insured__list{
+        @include flex(column, center, center);
+        gap: 30px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 60px 0px;
+    .container{
+      .s__get__insured__title, .s__get__insured__list{
+        text-align: center;
+        @include flex(column, center, center);
+      }
+    }
+  }
+  @media (max-width: 480px){
+    padding: 30px 0px;
+    .container{
+      .s__get__insured__title{
+        h3{
+          font-size: 24px;
+        }
+      }
+      .s__get__insured__list{
+        li{
+          span{
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
 .s__cta__primary__home{
   width: 100%;
   padding: 100px 0px;
@@ -230,11 +323,13 @@
     .container{
       @include flex(column, center, space-between);
       gap: 50px;
+      max-width: 700px;
     }
   }
   @media (max-width: 768px){
     .container{
       padding: 60px;
+      max-width: 100%;
       .s__support__home__content{
         text-align: center;
         .s__support__home__content__link{
