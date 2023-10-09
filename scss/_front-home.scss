@@ -1,5 +1,86 @@
 // Sections
-.s__get__insured{
+.s__who__we__are__home{
+  .container{
+    padding: 100px 0px;
+    border-bottom: 1px solid #DAE6F2;
+    @include flex(row, flex-start, space-between);
+    .s__who__we__are__home__left{
+      width: 100%;
+      max-width: 600px;
+      h2{
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      .s__who__we__are__home__left__bottom{
+        @include flex(row, flex-start, flex-start);
+        gap: 40px;
+        .s__who__we__are__home__left__bottom__ratings{
+          @include flex(row, flex-start, center);
+          gap: 25px;
+          .s__who__we__are__home__left__bottom__ratings__content{
+            span{
+              display: inline-block;
+              margin-top: 10px;
+              @include flex(row, flex-start, flex-start);
+              gap: 10px;
+              p{
+                color: var(--gray-900);
+                font-weight: 700;
+              }
+            }
+          }
+        }
+        .s__who__we__are__home__left__bottom__trustpilot{
+          border-left: 1px solid #DAE6F2;
+          padding-left: 40px;
+          span{
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 700;
+            color: #000;
+          }
+        }
+      }
+    }
+    .s__who__we__are__home__right{
+      width: 100%;
+      max-width: 488px;
+      p, span{
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      p{
+        color: var(--gray-700);
+        font-weight: 400;
+      }
+      span{
+        display: inline-block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: var(--gray-900);
+        font-weight: 700;
+      }
+      button{
+        @include flex(row, center, flex-start);
+        gap: 15px;
+        p,i{
+          color: var(--primary-blue);
+          font-family: 'Roboto', sans-serif;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 28px;
+        }
+        &:hover{
+          p{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.s__get__insured__home{
   padding: 100px 0px;
   .container{
     @include flex(row, flex-start, space-between);
