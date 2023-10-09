@@ -14,19 +14,6 @@ html{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    // customize the bar y
-    &::-webkit-scrollbar-track{
-        // the whole area
-        background-color: transparent;
-    }
-    &::-webkit-scrollbar{
-        width: 5px;
-        background-color: transparent;
-    }
-    &::-webkit-scrollbar-thumb{
-        // the scrollbar itself
-        background-color: var(--black-light);
-    }
 }
 main{
     position: relative !important;
