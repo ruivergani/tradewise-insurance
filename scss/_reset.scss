@@ -12,10 +12,11 @@
 }
 html{
     font-size: 62.5%;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     scroll-behavior: smooth;
 }
 body{
+    overflow-x: hidden !important;
     -webkit-font-smoothing: antialiased;
 }
 main{
