@@ -3,6 +3,8 @@
   border-bottom: 1px solid #DAE6F2;
   background-color: #F9FBFD;
   position: relative;
+  overflow:hidden;
+  max-height: 747px;
   .container{
     @include flex(row, flex-start, space-between);
     .s__hero__home__content{
@@ -76,12 +78,6 @@
     .s__hero__home__image{
       width: 100%;
       max-width: 526px;
-      .s__hero__home__card{
-        position: absolute;
-        bottom: 130px;
-        right: 450px;
-        z-index: 2022;
-      }
       .s__hero__home__image__img{
         z-index: 3;
         width: 100%;
@@ -91,6 +87,12 @@
         right: 0;
         top: 0;
         object-fit: cover;
+      }
+      .s__hero__home__card{
+        position: absolute;
+        bottom: 130px;
+        right: 450px;
+        z-index: 2022;
       }
       .s__hero__home__image__img__rounded{
         z-index: 2022;
@@ -114,6 +116,7 @@
   }
   // Responsive
   @media (max-width: 1200px){
+    max-height: 100%;
     .container{
       padding-bottom: 60px;
       @include flex(column, center, center);
@@ -246,6 +249,24 @@
           max-height: 300px;
         }
         .s__hero__home__image__img__rounded, .s__hero__square__right, .s__hero__square__left, .s__hero__home__card{
+          display: none;
+        }
+      }
+    }
+  }
+  @media (min-width: 1800px){
+    .container{
+      .s__hero__home__image{
+        position: relative;
+        height: 100%;
+        max-height: 747px;
+        .s__hero__home__image__img{
+          min-height: 747px;
+          position: relative;
+          top: none;
+          right: none;
+        }
+        .s__hero__home__card, .s__hero__square__right{
           display: none;
         }
       }

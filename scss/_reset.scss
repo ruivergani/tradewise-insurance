@@ -16,7 +16,6 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    overflow-x: hidden !important;
     -webkit-font-smoothing: antialiased;
 }
 main{
@@ -30,6 +29,9 @@ button, a{
     background-color: transparent;
     border: none;
     cursor: pointer !important;
+}
+button{
+    all: unset;
 }
 :focus{
     outline: 0;
