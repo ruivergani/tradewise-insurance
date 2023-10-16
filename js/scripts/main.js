@@ -16,6 +16,7 @@ if(btnMobileMenu){
     document.documentElement.classList.toggle("opened-menu");
   });
 }
+// Mobile Menu Dropdown
 const dropdownButtonMobileMenuItem = document.querySelectorAll(".js-mobile-menu-item");
 const dropdownAreaMobileMenu = document.querySelectorAll(".js-menu-dropdown-mobile");
 if(dropdownButtonMobileMenuItem && dropdownAreaMobileMenu){
@@ -28,6 +29,39 @@ if(dropdownButtonMobileMenuItem && dropdownAreaMobileMenu){
       button.classList.toggle("is-active");
       // open dropdown area to show submenu
       dropdownAreaMobileMenu[index].classList.toggle("is-active");
+    })
+  })
+}
+// Menu Dropdown Desktop
+const buttonDrodpdownDesktop = document.querySelectorAll(".js-btn-menu");
+const menuDropdownDesktopArea = document.querySelectorAll(".nav__dropdown__menu__item");
+const fadeOverlay = document.getElementById("js-fade-overlay");
+if(buttonDrodpdownDesktop && menuDropdownDesktopArea.length > 0){
+  buttonDrodpdownDesktop.forEach((button, index) => {
+    button.addEventListener("mouseenter", (event) => {
+      event.preventDefault();
+      // Remove from all active class
+      menuDropdownDesktopArea.forEach((itemMenu) => {
+        itemMenu.classList.remove("is-active");
+        itemMenu.addEventListener("mouseleave", () => {
+          itemMenu.classList.remove("is-active");
+          fadeOverlay.style.opacity = 0;
+          buttonDrodpdownDesktop.forEach((itemBtn) => {
+            itemBtn.classList.remove("is-active");
+          });
+        });
+      });
+      // Remove active from all buttons
+      buttonDrodpdownDesktop.forEach((itemBtn) => {
+        itemBtn.classList.remove("is-active");
+      })
+      // Add active class to button
+      button.classList.add("is-active");
+      // Add active class to dropdown area
+      menuDropdownDesktopArea[index].classList.add("is-active");
+      // Add fade overlay effect
+      fadeOverlay.style.opacity = 1;
+      fadeOverlay.style.pointerEvents = "none";
     })
   })
 }
