@@ -1,0 +1,61 @@
+.section__breadcrumbs{
+  .container{
+    margin-top: 70px;
+    ul{
+      @include flex(row, center, flex-start);
+      gap: 40px;
+      li{
+        position: relative;
+        &:not(:last-child) {
+          &:after {
+            content: "";
+            position: absolute;
+            right: -25px;
+            top: 20px;
+            width: 13px;
+            height: 13px;
+            background: url("../assets/icons/icon-arrow-breadcrumbs.svg")
+              no-repeat center center;
+          }
+        }
+        a{
+          @include flex(row, center, flex-start);
+          gap: 15px;
+          border-radius: 4px;
+          background: var(--gray-100);
+          padding: 15px 20px;
+          transition: all .2s;
+          i{
+            color: #000;
+          }
+          p{
+            color: #000;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+        &:hover{
+          a{
+            filter: brightness(0.9);
+          }
+        }
+      }
+    }
+  }
+}
+.section__content{
+  .container{
+    margin-top: 70px;
+    margin-bottom: 100px;
+    @include flex(column, flex-start, flex-start);
+    h1{
+      color: var(--gray-900);
+      font-family: 'Roboto', sans-serif;
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 112%;
+      margin-bottom: 35px;
+    }
+  }
+}
