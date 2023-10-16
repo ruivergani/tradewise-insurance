@@ -6,7 +6,7 @@
   max-height: 747px;
   .container{
     @include flex(row, center, space-between);
-    .s__hero__home__content__404{
+    .s__hero__home__content__404{ 
       flex: 1;
       width: 100%;
       max-width: 700px;
