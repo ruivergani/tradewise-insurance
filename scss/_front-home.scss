@@ -2,8 +2,8 @@
 .s__hero__home{
   border-bottom: 1px solid #DAE6F2;
   background-color: #F9FBFD;
-  position: relative;
-  overflow:hidden;
+  position: relative !important;
+  overflow:hidden !important;
   max-height: 747px;
   .container{
     @include flex(row, flex-start, space-between);
@@ -115,6 +115,24 @@
     }
   }
   // Responsive
+  @media (min-width: 1800px){
+    .container{
+      .s__hero__home__image{
+        position: relative;
+        height: 100%;
+        max-height: 747px;
+        .s__hero__home__image__img{
+          min-height: 747px;
+          position: relative;
+          top: none;
+          right: none;
+        }
+        .s__hero__home__card, .s__hero__square__right{
+          display: none;
+        }
+      }
+    }
+  }
   @media (max-width: 1200px){
     max-height: 100%;
     .container{
@@ -254,24 +272,7 @@
       }
     }
   }
-  @media (min-width: 1800px){
-    .container{
-      .s__hero__home__image{
-        position: relative;
-        height: 100%;
-        max-height: 747px;
-        .s__hero__home__image__img{
-          min-height: 747px;
-          position: relative;
-          top: none;
-          right: none;
-        }
-        .s__hero__home__card, .s__hero__square__right{
-          display: none;
-        }
-      }
-    }
-  }
+  
 }
 .s__who__we__are__home{
   .container{
@@ -408,6 +409,7 @@
   }
 }
 .s__get__insured__home{
+  scroll-margin-top: 100px;
   padding: 100px 0px;
   .container{
     @include flex(row, flex-start, space-between);

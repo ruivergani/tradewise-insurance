@@ -190,6 +190,7 @@ header{
       }
     }
     .nav__get__quote__button{
+      overflow:hidden !important;
       position: relative;
       background-color: var(--primary-blue);
       @include flex(row, center, center);
@@ -228,7 +229,6 @@ header{
       width: 20%;
       z-index: 0;
       border-bottom: 1px solid var(--primary-blue);
-      
     }
   }
   // Responsive
@@ -253,6 +253,18 @@ header{
             box-shadow: none;
           }
         }
+      }
+    }
+  }
+  @media (min-width: 1700px){
+    .container{
+      .nav__search__link, .background-blue{
+        display: none;
+        pointer-events: none;
+      }
+      .nav__get__quote__button{
+        padding-left: 60px;
+        padding-right: 60px;
       }
     }
   }
