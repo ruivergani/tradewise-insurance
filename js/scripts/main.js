@@ -65,7 +65,32 @@ if(buttonDrodpdownDesktop && menuDropdownDesktopArea.length > 0){
     })
   })
 }
-
+// Sticky Border to table of contents
+const stickyTableContent = document.getElementById("section__table__content");
+if(stickyTableContent){
+  window.addEventListener("scroll", () => {
+    const rect = stickyTableContent.getBoundingClientRect();
+    if (rect.top <= 100) {
+      stickyTableContent.classList.add("sticky-border");
+    } else {
+      stickyTableContent.classList.remove("sticky-border");
+    }
+  })
+}
+// Script for Table of Contents
+const itemContent = document.querySelectorAll(".js-nav-product li"); // all items from table content
+if (itemContent) {
+  itemContent.forEach(function (event) {
+    event.addEventListener("click", () => {
+      // remove active from all others
+      itemContent.forEach((item) => {
+        item.classList.remove("active");
+      });
+      // add active when click
+      event.classList.add("active");
+    });
+  });
+}
 // Configure tab navigation based on scroll
 const navLi = document.querySelectorAll(".js-nav-product li a");
 const sections = document.querySelectorAll("section");
@@ -74,7 +99,7 @@ if (navLi.length && sections.length) {
     let current = "";
     sections.forEach((section) => {
       let sectionTop = section.offsetTop;
-      if (window.pageYOffset >= sectionTop - 160) {
+      if (window.pageYOffset >= sectionTop - 200) {
         current = section.getAttribute("id");
       }
     });
@@ -99,7 +124,7 @@ if (navLi.length && sections.length) {
       if (targetSection) {
         let targetOffset = targetSection.offsetTop; // Get the target section's top offset
         window.scrollTo({
-          top: targetOffset - 110,
+          top: targetOffset - 200,
           behavior: "smooth", // Enable smooth scrolling
         });
       }

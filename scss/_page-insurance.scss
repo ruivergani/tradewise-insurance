@@ -514,14 +514,17 @@
 }
 .section__table__content {
   background-color: var(--white);
-  padding: 35px 0px;
+  padding: 25px 0px;
+  position: -webkit-sticky;
   position: sticky;
   top: 90px;
   width: 100%;
   z-index: 20;
   left: 0;
-  overflow-x: hidden;
+  //overflow-x: hidden;
   @include flex(row, center, center);
+  transition: all .2s;
+  border: 1px solid transparent;
   .container {
     ul {
       @include flex(row, center, space-between);
@@ -536,6 +539,7 @@
             font-size: 15px;
             font-weight: 800;
             line-height: 15px;
+            transition: all .2s;
           }
           p {
             color: var(--gray-900);
@@ -545,6 +549,14 @@
             line-height: 28px;
           }
           &:hover {
+            p {
+              text-decoration-line: underline;
+            }
+          }
+          &.active{
+            span{
+              color: var(--gray-900);
+            }
             p {
               text-decoration-line: underline;
             }
@@ -634,7 +646,11 @@
     }
   }
 }
+.sticky-border {
+  border-bottom: 1px solid var(--border-blue); /* Add a border to the sticky element */
+}
 .section__post__content {
+  scroll-margin-top: 190px !important;
   margin-top: 100px;
   margin-bottom: 60px;
   .container {
@@ -658,6 +674,7 @@
   }
 }
 .section__cover {
+  scroll-margin-top: 200px;
   .container {
     .section__cover__text {
       @include flex(row, flex-start, space-between);
@@ -873,6 +890,7 @@
   }
 }
 .section__overview_01, .section__overview_02 {
+  scroll-margin-top: 200px;
   margin-bottom: 40px;
   .container {
     h2 {
@@ -919,6 +937,7 @@
   }
 }
 .section__next{
+  scroll-padding-top: 200px;
   margin-bottom: 100px;
   .container{
     h2{
@@ -927,7 +946,7 @@
       font-size: 36px;
       font-weight: 500;
       line-height: 50px;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
     .section__next__content{
       @include flex(row, center, center);
@@ -1029,6 +1048,7 @@
   }
 }
 .section__faq{
+  scroll-margin-top: 200px;
   margin-bottom: 100px;
   .container{
     h2{
