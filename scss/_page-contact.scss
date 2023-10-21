@@ -1,5 +1,137 @@
+.s-map-contact {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .s-map-contact-left {
+      width: 100%;
+      height: 100%;
+      min-height: 370px;
+      position: relative;
+      max-width: 592px;
+      iframe {
+        height: 100%;
+        width: 100%;
+        min-height: 370px;
+        max-width: 592px;
+      }
+    }
+    .s-map-contact-right {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      h4 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 100%;
+        text-align: center;
+        color: #33303E;
+        margin-bottom: 30px;
+      }
+      p {
+        margin-bottom: 30px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        color: #4E4B59;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        li {
+          background: var(--secondary-blue);
+          border-radius: 10px;
+          width: 100%;
+          min-width: 240px;
+          max-width: 240px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          a {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            p,
+            span {
+              font-family: 'Roboto', sans-serif;
+              font-size: 16px;
+              line-height: 175%;
+              text-align: center;
+              color: var(--gray-800);
+              margin-bottom: 0px;
+            }
+            p {
+              font-weight: 700;
+              color: var(--gray-900);
+            }
+            span {
+              font-weight: 500;
+            }
+            &:hover {
+              span {
+                text-decoration: underline;
+                color: var(--primary-blue);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 1200px) {
+    .container {
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 60px;
+
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+
+      .s-map-contact-right {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 40px;
+
+    .container {
+      .s-map-contact-right {
+
+        h4,
+        p {
+          margin-bottom: 20px;
+        }
+
+        ul {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+
 .section__contact__content {
   margin: 100px 0px;
+
   .container {
     h2 {
       font-family: 'Roboto Flex', sans-serif;
@@ -9,7 +141,8 @@
       color: #33303E;
       margin-bottom: 30px;
     }
-    .p__section__contact__content{
+
+    .p__section__contact__content {
       margin-bottom: 40px;
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
@@ -17,15 +150,18 @@
       line-height: 175%;
       color: var(--gray-900);
     }
+
     ul {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: 60px;
+
       .info-01 {
         width: 100%;
         max-width: 379px;
       }
+
       .info-01,
       .info-02,
       .info-03 {
@@ -33,6 +169,7 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 40px;
+
         .info-01-hours,
         .info-02-hours,
         .info-03-hours {
@@ -44,18 +181,21 @@
             color: var(--gray-900);
             margin-bottom: 5px;
           }
+
           p {
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
             font-size: 16px;
             line-height: 175%;
             color: var(--gray-800);
+
             a {
               font-family: 'Roboto', sans-serif;
               font-weight: 500;
               font-size: 16px;
               line-height: 175%;
               color: var(--gray-800);
+
               &:hover {
                 text-decoration: underline;
                 color: var(--primary-blue);
@@ -63,6 +203,7 @@
             }
           }
         }
+
         .info-01-content,
         .info-02-content,
         .info-03-content {
@@ -73,30 +214,35 @@
             line-height: 175%;
             color: var(--gray-900);
             margin-bottom: 5px;
+
             a {
               font-family: 'Roboto', sans-serif;
               font-weight: 500;
               font-size: 16px;
               line-height: 175%;
               color: var(--gray-800);
+
               &:hover {
                 text-decoration: underline;
                 color: var(--primary-blue);
               }
             }
           }
+
           p {
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
             font-size: 16px;
             line-height: 175%;
             color: #33303E;
+
             a {
               font-family: 'Roboto', sans-serif;
               font-weight: 500;
               font-size: 16px;
               line-height: 175%;
               color: var(--gray-800);
+
               &:hover {
                 text-decoration: underline;
                 color: var(--primary-blue);
@@ -106,6 +252,7 @@
         }
       }
     }
+
     .message-info {
       margin-top: 50px;
       margin-bottom: 25px;
@@ -115,6 +262,7 @@
       line-height: 175%;
       color: #33303E;
     }
+
     span {
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
@@ -127,6 +275,7 @@
   // Responsive
   @media (max-width: 1050px) {
     padding-bottom: 60px;
+
     .container {
       ul {
         display: grid;
@@ -138,18 +287,22 @@
 
   @media (max-width: 768px) {
     padding-bottom: 40px;
+
     .container {
       h2 {
         text-align: center;
         margin-bottom: 30px;
       }
-      .p__section__contact__content{
+
+      .p__section__contact__content {
         text-align: center;
       }
+
       ul {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 30px;
+
         .info-01,
         .info-02,
         .info-03 {
@@ -159,9 +312,12 @@
           gap: 30px;
         }
       }
-      span, .message-info {
+
+      span,
+      .message-info {
         text-align: center !important;
       }
+
       .message-info {
         margin-top: 30px;
       }
