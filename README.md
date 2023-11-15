@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center"><a href="https://www.onesureinsurance.co.uk/">TradeWise Insurance</a></h1>
+  <h1 align="center"><a href="https://ruivergani.github.io/tradewise-insurance/">TradeWise Insurance</a></h1>
 </p>
 
 <p align="center" margin-top="25px" >
@@ -73,7 +73,7 @@ $ gulp
 
 ___
 
-[Check the final result here](https://www.onesureinsurance.co.uk/)
+[Check the final result here](https://ruivergani.github.io/tradewise-insurance/)
 
 ___
 
